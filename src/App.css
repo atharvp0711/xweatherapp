@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align cards */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-card {
+  flex: 1 1 calc(25% - 20px); /* Default: 4 cards in a row */
+  box-sizing: border-box; /* Ensure proper sizing */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .weather-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 480px) {
+  .weather-card {
+    flex: 1 1 100%; /* 1 card per row */
   }
 }

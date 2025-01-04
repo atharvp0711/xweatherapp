@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherCard from "./Components/WeatherCard";
+import "./App.css";
 
 const App = () => {
   const API_KEY = "2b88f2830d3647da8ac135549250401";
